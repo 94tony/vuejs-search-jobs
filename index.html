@@ -18,9 +18,15 @@
         <div class=" container">
             <div class="row">
                 <div v-for="(job,index) in jobs">
-                    <div class="job">
+                    <div class="job" :class="application(index)">
+                        <i @click="addHeart(index)" :class="heart(index)" class="fas fa-heart"></i>
+                        <button @click="addApply(index)" type="button" class="btn btn-success">Apply</button>
                         <h1>{{job.company}}</h1>
                         <h2>{{job.position}}</h2>
+                        <div>{{job.description}}</div>
+                        <div class="citta">{{job.city}}</div>
+                        <div>{{job.created_at}}</div>
+                        <div class="contract">{{job.contract}}</div>
                     </div>
                 </div>
             </div>

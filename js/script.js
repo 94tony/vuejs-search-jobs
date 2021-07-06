@@ -39,9 +39,45 @@ new Vue(
                     contract: 'Full Time'
                   },      
             ],
-            starred: [1, 2, 3],
-            applied: [4, 5]
+            starred: [],
+            applied: []
 
-        } 
+        } ,
+        methods:{
+            heart: function (index){
+                if (this.starred.includes(index + 1)){
+                    return 'yellow'
+                }else{
+                    return
+                }
+            },
+            addHeart:function (index){
+                if(this.starred.includes(index + 1) || this.applied.includes(index +1)) {
+                    return
+                }else {
+                    this.starred.push(index + 1);
+                }
+            },
+
+            application:function (index){
+                if(this.applied.includes(index + 1)){
+                    return 'application'
+                }else{
+                    return
+                }
+            },
+
+            addApply:function(index){
+                if(this.applied.includes(index + 1)){
+                    return
+                }else {
+                   this.applied.push(index + 1 )  
+                   this.starred.splice(index.value,1);
+                }
+
+            },
+           
+
+        }
     }
 )                   

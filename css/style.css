@@ -2,3 +2,28 @@
     border: 1px solid black;
     margin: 20px 0px ;
 }
+
+.citta{
+    font-size: 20px;
+    color: red;
+}
+
+.yellow{
+    color: yellow;
+}
+
+i{
+    font-size: 25px;
+}
+
+.application{
+    border: 2px solid darkcyan;
+}
+
+.contract{
+    border-top: 2px solid red;
+}
+
+button{
+    width: 100%;
+}
